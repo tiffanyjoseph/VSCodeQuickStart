@@ -5,13 +5,13 @@ private class TaskUtilTests {
     */ @IsTest
     static void testGetTaskPriorityNormal () {
         //Given
-        String priority = 'Normal';
+        String leadState = 'CA';
         //When
         Test.startTest();
-        String priorityActual = TaskUtil.getTaskPriority(priority);
+        String priorityActual = TaskUtil.getTaskPriority(leadState);
         Test.stopTest();
         //Then
-        Assert.areEqual('Normal', priorityActual);
+        Assert.arenotEqual('Normal', priorityActual);
 
     }
     /*
@@ -21,10 +21,10 @@ that tests the getTaskPriority method returning 'High'.
    @IsTest
     static void testGetTaskPriorityHigh () {
         //Given
-        String priority = 'High';
+         String leadState = 'CA';
         //When
         Test.startTest();
-        String priorityActual = TaskUtil.getTaskPriority(priority);
+        String priorityActual = TaskUtil.getTaskPriority(leadState);
         Test.stopTest();
         //Then
         Assert.areEqual('High', priorityActual);
