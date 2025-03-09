@@ -5,7 +5,7 @@ private class TaskUtilTests {
     */ @IsTest
     static void testGetTaskPriorityNormal () {
         //Given
-        String leadState = 'CA';
+        String leadState = '';
         //When
         Test.startTest();
         String priorityActual = TaskUtil.getTaskPriority(leadState);
@@ -30,4 +30,6 @@ that tests the getTaskPriority method returning 'High'.
         Assert.areEqual('High', priorityActual);
 
     }
+
+    
 }
